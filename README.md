@@ -10,40 +10,40 @@ Connect to the LikeyPix database in Beekeeper, and answer the following question
 ```
 Paste your query below:
 
-```
+
 SELECT * 
 FROM users
-
+```
 2. Write a query that returns all Posts
 
 ```
 Paste your query below:
 
-```
+
 SELECT * 
 FROM posts
-
+```
 3. Write a query that returns the count of all Posts
 
 ```
 Paste your query below:
 
-```
+
 SELECT count(posts) 
 FROM posts
-
+```
 4. Which Post had the most Comments?
-
+```
 Answer: 
 
 select count(*) as num, post_id from comments
     group by post_id 
     order by num desc
     limit 1;
-
+```
 5. Write a query that returns the Post which had the least Comments
 
-```
+
 Paste your query below:
 
 ```
@@ -51,16 +51,16 @@ select count(*) as num, post_id from comments
     group by post_id 
     order by num asc
     limit 1;
-
+```
 6. Which User has the most Comments?
-
+```
 Answer:
 
 select count(*) as comments, user_id from comments
     group by user_id 
     order by comments desc
     limit 1;
-
+```
 7. Write a single query to get all of the Posts and their Comments (You'll see the same Post repeated in the results)
 
 ```
