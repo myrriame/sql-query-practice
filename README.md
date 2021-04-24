@@ -30,7 +30,7 @@ select count(*) as num, post_id from comments
     order by num desc
     limit 1;
 
-    post #1
+    post 1
 ```
 5. Write a query that returns the Post which had the least Comments
 
@@ -50,7 +50,7 @@ select count(*) as comments, user_id from comments
     order by comments desc
     limit 1;
 
-    user #1
+    user 1
 ```
 7. Write a single query to get all of the Posts and their Comments (You'll see the same Post repeated in the results)
 
@@ -109,7 +109,7 @@ select last_name, length(last_name), id from students
 order by length desc 
 limit 1;
 
-id: 8
+id 8
 ```
 
 7. Write a query to get a list of Students in reverse alphabetical order of First Name
