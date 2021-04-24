@@ -166,12 +166,18 @@ order by year asc;
 ```
 
 6. How many foods contain "Egg" in their description?
+```
+select count(*) from food_des
+where long_desc ilike '%egg%';
 
-Answer: 
-
+total: 101
+```
 7. Write a query that will return a count of foods in each food group
 
 ```
-Paste your query below:
+select count(fd_group.fddrp_desc), fd_group.fddrp_desc num from food_des
+join fd_group
+on food_des.fdgrp_cd = fd_group.fdgrp_cd
+ group by fd_group.fddrp_desc;
 
 ```
