@@ -8,8 +8,6 @@ Connect to the LikeyPix database in Beekeeper, and answer the following question
 1. Write a query that returns all Users
 
 ```
-Paste your query below:
-
 
 SELECT * 
 FROM users
@@ -17,8 +15,6 @@ FROM users
 2. Write a query that returns all Posts
 
 ```
-Paste your query below:
-
 
 SELECT * 
 FROM posts
@@ -26,15 +22,12 @@ FROM posts
 3. Write a query that returns the count of all Posts
 
 ```
-Paste your query below:
-
 
 SELECT count(posts) 
 FROM posts
 ```
 4. Which Post had the most Comments?
-```
-Answer: 
+``` 
 
 select count(*) as num, post_id from comments
     group by post_id 
@@ -54,7 +47,6 @@ select count(*) as num, post_id from comments
 ```
 6. Which User has the most Comments?
 ```
-Answer:
 
 select count(*) as comments, user_id from comments
     group by user_id 
@@ -64,8 +56,6 @@ select count(*) as comments, user_id from comments
 7. Write a single query to get all of the Posts and their Comments (You'll see the same Post repeated in the results)
 
 ```
-Paste your query below:
-
 select * from comments
 join posts
 on comments.post_id = posts.id;
@@ -79,7 +69,6 @@ on comments.post_id = posts.id;
 1. Write a query to get the first name, last name, and github URL for every Student in the `students` table
 
 ```
-Paste your query below:
 
 select first_name, last_name, github_url from students
 ```
@@ -87,18 +76,17 @@ select first_name, last_name, github_url from students
 2. Write a query to get a list of Students who do not have a LinkedIn URL
 
 ```
-Paste your query below:
 
 SELECT first_name, last_name
 FROM students
-WHERE linkedin_url IS null;
+WHERE linkedin_url = '';
+
 
 ```
 
 3. Write a query to get a list of Teachers with the "Teaching Assistant" Role
 
 ```
-Paste your query below:
 
 SELECT * from teachers
 join teacher_roles
