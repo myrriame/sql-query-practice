@@ -143,18 +143,25 @@ fd_group
 3. Write a query to get the name of a food, and its corresponding food group name 
 
 ```
-Paste your query below:
+select shrt_desc, fddrp_desc from food_des
+join fd_group
+on food_des.fdgrp_cd = fd_group.fdgrp_cd
+limit 1;
 
 ```
 
 4. Identify the table that has information about data sources
 
-Answer:
 
+```
+data_src
+
+```
 5. Using the table from your previous answer, write a query that will get the oldest data source
 
 ```
-Paste your query below:
+select datasrc_id, year from data_src
+order by year asc;
 
 ```
 
