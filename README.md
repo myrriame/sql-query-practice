@@ -97,8 +97,10 @@ where name = 'Teaching Assistant';
 4. Write a query to get a list of Students, and their Class' `slug`
 
 ```
-Paste your query below:
 
+SELECT first_name, slug from students
+join classes
+on students.class_id = classes.id
 ```
 
 5. Write a query to get the length of every students First Name
